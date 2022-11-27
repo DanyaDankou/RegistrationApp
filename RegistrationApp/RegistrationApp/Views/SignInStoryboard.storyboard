@@ -52,7 +52,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
-                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-cq-546">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error email or password" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-cq-546">
                                                         <rect key="frame" x="0.0" y="0.0" width="378" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -73,6 +73,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign In" buttonSize="medium">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="singInAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3oZ-nW-1CG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -88,10 +91,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H6e-cE-8dq"/>
+                    <connections>
+                        <outlet property="emailTF" destination="lM8-ut-bO6" id="7LC-h8-hGY"/>
+                        <outlet property="errorLbl" destination="zDc-cq-546" id="hvJ-d5-k10"/>
+                        <outlet property="passTF" destination="tM6-2F-Uhp" id="RUp-V2-MAL"/>
+                        <outlet property="scrollConstraint" destination="GWB-Go-vSv" id="rue-r7-a9d"/>
+                        <segue destination="w3M-9m-ono" kind="show" identifier="goToMainTBVC" id="lbh-Ij-YvD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="919.62616822429902" y="79.697624190064801"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="HqO-RH-QST">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="w3M-9m-ono" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NE1-c0-Lur"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrt-yK-29X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1598" y="192"/>
         </scene>
         <!--SignUpStoryboard-->
         <scene sceneID="Fan-tk-BYo">

@@ -1,8 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CFb-8z-nVp">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="wO3-N7-pwV">
+            <objects>
+                <viewController id="qaV-V4-FvF" customClass="ProfileVC" customModule="RegistrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7TS-uy-yhv">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-Ve-eCP">
+                                <rect key="frame" x="153.33333333333334" y="712" width="121.66666666666666" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete account"/>
+                                <connections>
+                                    <action selector="deleteAccountAction" destination="qaV-V4-FvF" eventType="touchUpInside" id="wid-0h-5a1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="368-83-WPT">
+                                <rect key="frame" x="300" y="94" width="108" height="40.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutAction:" destination="qaV-V4-FvF" eventType="touchUpInside" id="vQo-hQ-5tL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m7P-mL-V7p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vxl-Ve-eCP" firstAttribute="centerX" secondItem="m7P-mL-V7p" secondAttribute="centerX" id="6mH-Id-Per"/>
+                            <constraint firstItem="368-83-WPT" firstAttribute="top" secondItem="m7P-mL-V7p" secondAttribute="top" constant="50" id="SzW-Ck-BTQ"/>
+                            <constraint firstItem="368-83-WPT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m7P-mL-V7p" secondAttribute="leading" symbolic="YES" id="WrA-PC-Drs"/>
+                            <constraint firstItem="m7P-mL-V7p" firstAttribute="trailing" secondItem="368-83-WPT" secondAttribute="trailing" constant="20" id="jQ4-LB-ShI"/>
+                            <constraint firstItem="m7P-mL-V7p" firstAttribute="bottom" secondItem="Vxl-Ve-eCP" secondAttribute="bottom" constant="100" id="sb6-cP-122"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.rectangle" catalog="system" id="6Ii-Pd-cfK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjq-rG-oZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="385"/>
+        </scene>
+        <!--Application-->
+        <scene sceneID="j3a-mb-Xia">
+            <objects>
+                <viewController id="yDJ-hm-1e9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9le-5Z-Wyh">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qKJ-FC-MNd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Application" image="book" catalog="system" id="HDB-5a-hRr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaK-yD-ker" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="-221"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7JY-jQ-s2j">
+            <objects>
+                <tabBarController id="CFb-8z-nVp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wgW-Ri-CP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yDJ-hm-1e9" kind="relationship" relationship="viewControllers" id="sAn-Ci-aei"/>
+                        <segue destination="qaV-V4-FvF" kind="relationship" relationship="viewControllers" id="IMh-Me-G2I"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yT-Jj-u2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-715" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
