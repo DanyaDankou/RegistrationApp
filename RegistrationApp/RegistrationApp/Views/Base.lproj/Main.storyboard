@@ -16,10 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-Ve-eCP">
-                                <rect key="frame" x="153.33333333333334" y="712" width="121.66666666666666" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Delete account"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="decor-landtop" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-Qk-GWi">
+                                <rect key="frame" x="203.33333333333337" y="598.66666666666663" width="224.66666666666663" height="327.33333333333337"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-Ve-eCP">
+                                <rect key="frame" x="159.66666666666666" y="735.66666666666663" width="108.99999999999997" height="27.333333333333371"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Delete account">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="12"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="deleteAccountAction" destination="qaV-V4-FvF" eventType="touchUpInside" id="wid-0h-5a1"/>
                                 </connections>
@@ -36,20 +42,22 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m7P-mL-V7p"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Vxl-Ve-eCP" firstAttribute="centerX" secondItem="m7P-mL-V7p" secondAttribute="centerX" id="6mH-Id-Per"/>
+                            <constraint firstAttribute="bottom" secondItem="VbQ-Qk-GWi" secondAttribute="bottom" id="SAd-7o-Zf7"/>
                             <constraint firstItem="368-83-WPT" firstAttribute="top" secondItem="m7P-mL-V7p" secondAttribute="top" constant="50" id="SzW-Ck-BTQ"/>
                             <constraint firstItem="368-83-WPT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m7P-mL-V7p" secondAttribute="leading" symbolic="YES" id="WrA-PC-Drs"/>
+                            <constraint firstAttribute="trailing" secondItem="VbQ-Qk-GWi" secondAttribute="trailing" id="d9l-1i-Yto"/>
                             <constraint firstItem="m7P-mL-V7p" firstAttribute="trailing" secondItem="368-83-WPT" secondAttribute="trailing" constant="20" id="jQ4-LB-ShI"/>
-                            <constraint firstItem="m7P-mL-V7p" firstAttribute="bottom" secondItem="Vxl-Ve-eCP" secondAttribute="bottom" constant="100" id="sb6-cP-122"/>
+                            <constraint firstItem="m7P-mL-V7p" firstAttribute="bottom" secondItem="Vxl-Ve-eCP" secondAttribute="bottom" constant="80" id="sb6-cP-122"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.crop.rectangle" catalog="system" id="6Ii-Pd-cfK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjq-rG-oZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="385"/>
+            <point key="canvasLocation" x="166.82242990654206" y="384.88120950323975"/>
         </scene>
         <!--Application-->
         <scene sceneID="j3a-mb-Xia">
@@ -59,7 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qKJ-FC-MNd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Application" image="book" catalog="system" id="HDB-5a-hRr"/>
                 </viewController>
@@ -88,9 +96,10 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
+        <image name="decor-landtop" width="224.66667175292969" height="327.33334350585938"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

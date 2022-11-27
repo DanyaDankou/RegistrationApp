@@ -277,7 +277,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter secret code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e0Y-el-EvC">
                                                 <rect key="frame" x="0.0" y="0.0" width="328" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <action selector="codeTFAction:" destination="cso-d0-uT0" eventType="editingDidEndOnExit" id="cQ1-XS-Wfj"/>
                                                 </connections>
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUb-Fl-J0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1455" y="84"/>
+            <point key="canvasLocation" x="1453.7383177570093" y="83.585313174946009"/>
         </scene>
     </scenes>
     <resources>

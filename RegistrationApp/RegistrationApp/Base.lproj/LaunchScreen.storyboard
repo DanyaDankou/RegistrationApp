@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="appicon" width="1200" height="1200"/>
+        <image name="appicon" width="600" height="600"/>
     </resources>
 </document>
